@@ -10,12 +10,12 @@ const NavBar = () => {
           />
         </a>
         <div className="justify-between hidden lg:flex">
-          <a className="px-4 text-gray-800" href="/about">
+          <Link className="px-4 text-gray-800" to="/about">
             About
-          </a>
-          <a className="px-4 text-gray-800" href="/contact">
+          </Link>
+          <Link className="px-4 text-gray-800" to="/contact">
             Contact
-          </a>
+          </Link>
         </div>
         <div className="lg:hidden">
           <button className="navbar-burger flex items-center text-blue-600 p-3">
