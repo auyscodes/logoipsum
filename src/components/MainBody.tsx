@@ -16,16 +16,16 @@ interface iactor {
 }
 const MainBody = () => {
 
-    const [actors, setActors] = useState([]);
-    const [filteredActors, setFilteredActors] = useState([]);
-    const [actorNationalities, setActorNationalities] = useState([]);
+    const [actors, setActors] = useState<iactor[]>([]);
+    const [filteredActors, setFilteredActors] = useState<iactor[]>([]);
+    const [actorNationalities, setActorNationalities] = useState<string[]>([]);
     useEffect(()=>{
         const getData = async () => {
             const result = await fetch(url);
             result.json().then(json=>{
                 setActors(json);
                 setFilteredActors(json);
-                let nationalities = [];
+                const nationalities = [];
                 for (const actor of json){
                     if (nationalities.indexOf(actor.nationality)===-1){
                         nationalities.push(actor.nationality);

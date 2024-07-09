@@ -1,7 +1,7 @@
 const Card = (props) => {
     return(<div className="w-full md:w-1/2 lg:w-1/4 p-4">
         <div className="w-full text-center">
-            <img src={props.imageSrc} className="w-full h-52 object-cover cursor-pointer" />
+            <img src={props.imageSrc} className="w-full h-52 mx-auto object-cover cursor-pointer" />
             <div className="pt-6 pb-6 bg-white">
                 <h3 className="text-xl font-semibold text-blue-800 cursor-pointer">{props.actorName}</h3>
                 <p className="mb-8 text-gray-500 cursor-pointer">{props.actorNationality}</p>
