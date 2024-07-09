@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav className="py-8 px-4 lg:px-10">
@@ -8,7 +9,7 @@ const NavBar = () => {
             alt="logoipsum"
           />
         </a>
-        <div className="flex justify-between hidden lg:block">
+        <div className="justify-between hidden lg:flex">
           <a className="px-4 text-gray-800" href="/about">
             About
           </a>
