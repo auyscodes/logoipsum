@@ -19,7 +19,10 @@ const Card = (props) => {
           <p className="mb-8 text-gray-500 cursor-pointer">
             {props.actorNationality}
           </p>
-          <div className="flex justify-center items-center">
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="flex justify-center items-center"
+          >
             <a
               target="_blank"
               href="https://www.facebook.com/aaronpaul"
