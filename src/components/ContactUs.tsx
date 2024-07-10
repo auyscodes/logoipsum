@@ -1,10 +1,10 @@
 import Footer from "./Footer";
-import NavBar from "./Navbar";
+
 
 const ContactUs = () => {
   return (
     <div>
-      <NavBar />
+      
 
       <div>
         <div className="pt-8 flex flex-col justify-center items-center">

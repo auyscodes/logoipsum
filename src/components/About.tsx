@@ -1,10 +1,10 @@
 import Footer from "./Footer";
-import NavBar from "./Navbar";
+
 
 const About = () => {
   return (
     <div className="bg-white">
-      <NavBar />
+      
 
       <div>
         <div className="pt-8 flex flex-col justify-center items-center">

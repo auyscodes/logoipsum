@@ -1,4 +1,3 @@
-import NavBar from "./Navbar";
 import MainBody from "./MainBody";
 import Modal from "./Modal";
 import { useEffect, useState } from "react";
@@ -61,16 +60,13 @@ const Home = () => {
   };
   return (
     <>
-    <div onClick={(e) => {
+      <div
+        onClick={(e) => {
           setSelectedActor(null);
-        }}>
-    <Modal
-        selectedActor={selectedActor}
-        
-      />
-    </div>
-      
-      <NavBar />
+        }}
+      >
+        <Modal selectedActor={selectedActor} />
+      </div>
 
       <div>
         <div className="pt-8 flex flex-col justify-center items-center">
@@ -91,7 +87,7 @@ const Home = () => {
           handleSearch={handleSearch}
         />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
