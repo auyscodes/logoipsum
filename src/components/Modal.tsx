@@ -1,5 +1,10 @@
-const Modal = (props) => {
-  if (props.selectedActor == null) return <></>;
+import { iactor } from "../types/actor";
+
+interface ModalProps {
+  selectedActor: iactor | null;
+}
+const Modal = ({ selectedActor }: ModalProps) => {
+  if (selectedActor == null) return <></>;
 
   return (
     <div className="fixed h-screen top-0 left-0 w-full z-10 bg-black bg-opacity-20">
@@ -14,10 +19,10 @@ const Modal = (props) => {
             <div className="flex flex-wrap h-full">
               <div className="w-full lg:w-3/5 px-12 lg:px-10 py-10">
                 <span className="text-blue-400">
-                  {props.selectedActor.nationality}
+                  {selectedActor.nationality}
                 </span>
                 <h2 className="mt-2 mb-6 text-4xl font-bold font-heading text-blue-800">
-                  {props.selectedActor.name}
+                  {selectedActor.name}
                 </h2>
                 <p className="mb-6 text-lg text-gray-500 h-36 overflow-hidden">
                   An American actor, voice actor, writer and director. He is
@@ -113,7 +118,7 @@ const Modal = (props) => {
               </div>
               <div className="hidden lg:w-2/5 lg:block">
                 <img
-                  src={props.selectedActor.image}
+                  src={selectedActor.image}
                   className="h-full w-full object-cover"
                 />
               </div>

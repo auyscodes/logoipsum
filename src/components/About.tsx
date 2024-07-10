@@ -1,11 +1,6 @@
-import Footer from "./Footer";
-
-
 const About = () => {
   return (
     <div className="bg-white">
-      
-
       <div>
         <div className="pt-8 flex flex-col justify-center items-center">
           <h2 className="mt-8 mb-6 text-4xl lg:text-5xl font-bold text-blue-800">
@@ -93,9 +88,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      
-
-      <Footer />
     </div>
   );
 };

@@ -1,19 +1,10 @@
 import MainBody from "./MainBody";
 import Modal from "./Modal";
 import { useEffect, useState } from "react";
-import Footer from "./Footer";
+import { iactor } from "../types/actor";
+
 const url = "https://freetestapi.com/api/v1/actors?limit=30";
-export interface iactor {
-  id: number;
-  name: string;
-  birth_year: number;
-  death_year: number;
-  nationality: string;
-  known_for: string[];
-  awards: string[];
-  biography: string;
-  image: string;
-}
+
 const Home = () => {
   const [actors, setActors] = useState<iactor[]>([]);
   const [filteredActors, setFilteredActors] = useState<iactor[]>([]);
@@ -61,7 +52,7 @@ const Home = () => {
   return (
     <>
       <div
-        onClick={(e) => {
+        onClick={() => {
           setSelectedActor(null);
         }}
       >
@@ -87,7 +78,6 @@ const Home = () => {
           handleSearch={handleSearch}
         />
       </div>
-      <Footer />
     </>
   );
 };

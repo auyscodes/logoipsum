@@ -1,23 +1,36 @@
-const Card = (props) => {
+interface CardProps {
+  actorId: number;
+  imageSrc: string;
+  actorName: string;
+  actorNationality: string;
+  setSelectedActor: (e: number) => void;
+}
+const Card = ({
+  actorId,
+  imageSrc,
+  actorName,
+  actorNationality,
+  setSelectedActor,
+}: CardProps) => {
   return (
     <div
-      id={props.actorId}
+      id={actorId.toString()}
       className="w-full md:w-1/2 lg:w-1/4 p-4"
       onClick={(e) => {
-        props.setSelectedActor((e.currentTarget as HTMLElement).id);
+        setSelectedActor(Number((e.currentTarget as HTMLElement).id));
       }}
     >
       <div className="w-full text-center">
         <img
-          src={props.imageSrc}
+          src={imageSrc}
           className="w-full h-52 mx-auto object-cover cursor-pointer"
         />
         <div className="pt-6 pb-6 bg-white">
           <h3 className="text-xl font-semibold text-blue-800 cursor-pointer">
-            {props.actorName}
+            {actorName}
           </h3>
           <p className="mb-8 text-gray-500 cursor-pointer">
-            {props.actorNationality}
+            {actorNationality}
           </p>
           <div
             onClick={(e) => e.stopPropagation()}

@@ -1,8 +1,11 @@
-const Search = (props) => {
+interface SearchProps {
+  onSearchChange: (searchTerm: string) => void;
+}
+const Search = ({ onSearchChange }: SearchProps) => {
   return (
     <div className="pt-2 relative">
       <input
-        onChange={(e) => props.onSearchChange(e.target.value)}
+        onChange={(e) => onSearchChange(e.target.value)}
         type="search"
         placeholder="Search..."
         className="border-2 border-gray-100 bg-white h-10 px-5 pr-16 text-sm rounded-lg"
