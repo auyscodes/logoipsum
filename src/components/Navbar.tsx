@@ -3,12 +3,12 @@ const NavBar = () => {
   return (
     <nav className="py-8 px-4 lg:px-10">
       <div className="flex justify-between">
-        <a href="/">
+        <Link to="/">
           <img
             src="https://micro-team.netlify.app/_nuxt/img/logo.54d64d2.svg"
             alt="logoipsum"
           />
-        </a>
+        </Link>
         <div className="justify-between hidden lg:flex">
           <Link className="px-4 text-gray-800" to="/about">
             About
